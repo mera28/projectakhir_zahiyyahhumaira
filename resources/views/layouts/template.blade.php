@@ -86,16 +86,17 @@
 </li>
 
 <li class="nav-item">
-                            <a href="#" class="nav-link {{ ($title==='Users')?'active':''}}">
+                            <a href="{{route('pengguna.index')}}" class="nav-link {{ ($title==='User')?'active':''}}">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Admin
                                 </p>
                             </a>
                         </li>
+
                                 
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{($title==='Produk')?'active':''}}">
+                            <a href="{{route('produk.index')}}" class="nav-link {{($title==='Produk')?'active':''}}">
                                 <i class="nav-icon fas fa-boxes"></i>
                                 <p>
                                     Barang
