@@ -11,22 +11,35 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('barangs', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
             $table->integer('stock');
             $table->double('price');
-            $table->date('tanggal');
             $table->timestamps();
+           
         });
+       
+        Schema::table('products', function (Blueprint $table) {
+           
+        });
+       
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('barangs');
+        Schema::table('products', function (Blueprint $table) {
+        });
+
+        Schema::table('products', function (Blueprint $table) {
+        });
+
+        Schema::dropIfExists('products');
     }
+
 };
