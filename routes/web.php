@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PemasukanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,3 +18,4 @@ Route::get('/', function () {
 Route::resource('pengguna',UserController::class)->except('destroy','create','show','update','edit');
 
 Route::resource('produk',ProductController::class);
+Route::resource('pemasukan',PemasukanController::class);
