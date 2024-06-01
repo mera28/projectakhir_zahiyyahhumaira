@@ -10,9 +10,4 @@ class Pemasukan extends Model
     use HasFactory;
     protected $fillable=['name','stock','tanggal','description'];
 
-
-    public function order_detail():HasMany
-    {
-        return $this->hasMany(Order_detail::class);
-    }
 }
